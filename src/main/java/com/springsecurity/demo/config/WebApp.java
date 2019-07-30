@@ -1,20 +1,21 @@
-package com.springsecurity;
+package com.springsecurity.demo.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class WebApp extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class<?>[0];
+        // TODO Auto-generated method stub
+        return null;
     }
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class<?>[]{ DemoConfig.class };
+        return new Class[] { DemoConfig.class };
     }
 
     @Override
     protected String[] getServletMappings() {
-        return new String[]{ "/" };
+        return new String[] { "/" };
     }
 }
