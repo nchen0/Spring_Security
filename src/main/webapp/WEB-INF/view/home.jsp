@@ -22,13 +22,15 @@
 <br><br>Role(s): <security:authentication property="principal.authorities" />
 </p>
 <hr>
+<security:authorize access="hasRole('MANAGER')">
 <%--Add a link to /leaders -- this is for managers--%>
 <p><a href="${pageContext.request.contextPath}/leaders">Leadership Meeting</a>(Only for Managers)</p>
 <hr>
-
+</security:authorize>
+<security:authorize access="hasRole('ADMIN')">
 <%--Add a link to /systems -- this is for admins--%>
 <p><a href="${pageContext.request.contextPath}/systems">IT Systems Meeting</a>(Only for Admins)</p>
-
+</security:authorize>
 <p>Welcome to the home page</p>
 <%--Add a logout button--%>
 <form:form action="${pageContext.request.contextPath}/logout" method="POST">
