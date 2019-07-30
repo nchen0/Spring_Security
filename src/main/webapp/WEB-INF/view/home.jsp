@@ -11,6 +11,6 @@
     <title>home</title>
 </head>
 <body>
-Home
+Home View
 </body>
 </html>
